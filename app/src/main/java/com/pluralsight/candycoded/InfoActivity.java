@@ -17,6 +17,7 @@ import org.xmlpull.v1.XmlPullParserException;
 
 public class InfoActivity extends AppCompatActivity {
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -51,5 +52,10 @@ public class InfoActivity extends AppCompatActivity {
     // ***
     // TODO - Task 3 - Launch the Phone Activity
     // ***
+    public void createPhoneIntent(View view){
+        Intent actionDial=new Intent(Intent.ACTION_DIAL);
+        Uri tel=Uri.parse("0123456789");
+        actionDial.setData(tel);
+    }
 
 }
